@@ -11,3 +11,4 @@ venv/
 # Thư mục chứa media/static gom về (tùy dự án)
 media/
 staticfiles/
+logs/
