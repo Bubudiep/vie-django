@@ -1,0 +1,6 @@
+2026-09-19 14:58:03,912 INFO inventory.api Stock in: item_id=1 qty=20.000 by user_id=76
+2026-09-19 14:58:03,919 INFO inventory.api Stock in: item_id=2 qty=10.000 by user_id=76
+2026-09-19 14:58:03,934 INFO inventory.api Stock out: item_id=2 qty=9.000 by user_id=76
+2026-09-19 14:58:03,954 INFO inventory.api Stock in: item_id=2 qty=5.000 by user_id=76
+2026-09-19 14:58:03,989 INFO inventory.api Recipe set: product_id=10 items=2 by user_id=76
+2026-09-19 14:58:04,016 INFO inventory.api Produced: product_id=10 qty=10.000 by user_id=76

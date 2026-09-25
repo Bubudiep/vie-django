@@ -1,0 +1,1025 @@
+2026-09-21 07:51:04,437 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 07:51:22,431 INFO django.channels.server [mHTTP POST /o2/token/ 200 [1.56, 127.0.0.1:59837][0m
+2026-09-21 07:51:22,667 ERROR django.request Internal Server Error: /accounts/me/
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column chat_chatroom.avatar does not exist
+LINE 1: ...at_chatroom"."room_type", "chat_chatroom"."name", "chat_chat...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 43, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\base.py", line 255, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 526, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 581, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 508, in func
+    return context.run(run_child)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 506, in run_child
+    return child()
+           ^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 585, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 552, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\fields.py", line 1944, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\accounts\serializers.py", line 111, in get_unread_messages_count
+    return total_unread_count(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\chat\services.py", line 73, in total_unread_count
+    for member in members:
+                  ^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 473, in __iter__
+    self._fetch_all()
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column chat_chatroom.avatar does not exist
+LINE 1: ...at_chatroom"."room_type", "chat_chatroom"."name", "chat_chat...
+                                                             ^
+
+2026-09-21 07:51:22,682 ERROR django.channels.server [35;1mHTTP GET /accounts/me/ 500 [0.25, 127.0.0.1:59837][0m
+2026-09-21 07:53:43,055 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 07:53:52,196 INFO django.channels.server [mHTTP POST /o2/token/ 200 [1.82, 127.0.0.1:49378][0m
+2026-09-21 07:53:52,334 INFO django.channels.server [mHTTP GET /accounts/me/ 200 [0.13, 127.0.0.1:49378][0m
+2026-09-21 07:53:52,374 INFO django.channels.server WebSocket HANDSHAKING /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:54149]
+2026-09-21 07:53:52,484 INFO django.channels.server WebSocket CONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:54149]
+2026-09-21 07:53:52,780 INFO django.channels.server [mHTTP OPTIONS /accounts/chat/ 200 [0.00, 127.0.0.1:49378][0m
+2026-09-21 07:53:52,933 INFO django.channels.server [mHTTP GET /accounts/chat/ 200 [0.15, 127.0.0.1:49378][0m
+2026-09-21 07:53:52,939 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:62014]
+2026-09-21 07:53:53,149 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:62014]
+2026-09-21 07:53:53,821 INFO django.utils.autoreload C:\Dev\Django\VieStore\chat\api.py changed, reloading.
+2026-09-21 07:53:55,373 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 07:53:57,098 INFO django.channels.server WebSocket HANDSHAKING /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:51294]
+2026-09-21 07:53:57,258 INFO django.channels.server WebSocket CONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:51294]
+2026-09-21 07:53:57,281 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:52231]
+2026-09-21 07:53:58,115 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:52231]
+2026-09-21 07:54:03,980 INFO django.channels.server [mHTTP POST /o2/token/ 200 [2.93, 127.0.0.1:49674][0m
+2026-09-21 07:54:04,172 INFO django.channels.server [mHTTP GET /accounts/me/ 200 [0.19, 127.0.0.1:49674][0m
+2026-09-21 07:54:04,245 INFO django.channels.server WebSocket HANDSHAKING /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:54029]
+2026-09-21 07:54:04,420 INFO django.channels.server WebSocket CONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:54029]
+2026-09-21 07:54:04,625 INFO django.channels.server [mHTTP OPTIONS /accounts/chat/ 200 [0.01, 127.0.0.1:49674][0m
+2026-09-21 07:54:04,900 INFO django.channels.server [mHTTP GET /accounts/chat/ 200 [0.27, 127.0.0.1:49674][0m
+2026-09-21 07:54:04,909 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:50739]
+2026-09-21 07:54:05,379 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:50739]
+2026-09-21 07:54:12,786 INFO django.channels.server WebSocket DISCONNECT /ws/chat/4/ [127.0.0.1:52231]
+2026-09-21 07:54:12,787 INFO django.channels.server WebSocket DISCONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:51294]
+2026-09-21 07:54:13,455 INFO django.channels.server [mHTTP GET /accounts/me/ 200 [0.23, 127.0.0.1:51011][0m
+2026-09-21 07:54:13,529 INFO django.channels.server WebSocket HANDSHAKING /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:60269]
+2026-09-21 07:54:13,695 INFO django.channels.server WebSocket CONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:60269]
+2026-09-21 07:54:13,983 INFO django.utils.autoreload C:\Dev\Django\VieStore\chat\serializers.py changed, reloading.
+2026-09-21 07:54:16,498 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 07:54:17,660 INFO django.channels.server WebSocket HANDSHAKING /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:63969]
+2026-09-21 07:54:17,673 INFO django.channels.server WebSocket HANDSHAKING /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:49791]
+2026-09-21 07:54:18,203 INFO django.channels.server WebSocket CONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:63969]
+2026-09-21 07:54:18,232 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:50468]
+2026-09-21 07:54:18,395 INFO django.channels.server WebSocket CONNECT /ws/room/INNRK6EAZNJWD5YGZ7/ [127.0.0.1:49791]
+2026-09-21 07:54:19,364 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:50468]
+2026-09-21 07:55:15,238 INFO django.channels.server WebSocket DISCONNECT /ws/chat/4/ [127.0.0.1:50468]
+2026-09-21 07:55:15,243 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:61474]
+2026-09-21 07:55:16,098 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:61474]
+2026-09-21 07:55:16,299 INFO django.channels.server [mHTTP GET /accounts/chat/ 200 [0.56, 127.0.0.1:64517][0m
+2026-09-21 07:55:16,302 INFO django.channels.server [mHTTP GET /accounts/chat/ 200 [0.64, 127.0.0.1:64728][0m
+2026-09-21 07:55:16,315 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:49261]
+2026-09-21 07:55:16,788 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:49261]
+2026-09-21 07:55:24,526 INFO django.channels.server WebSocket DISCONNECT /ws/chat/4/ [127.0.0.1:61474]
+2026-09-21 07:55:24,533 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:59282]
+2026-09-21 07:55:24,543 INFO django.channels.server WebSocket DISCONNECT /ws/chat/4/ [127.0.0.1:49261]
+2026-09-21 07:55:24,547 INFO django.channels.server WebSocket HANDSHAKING /ws/chat/4/ [127.0.0.1:61072]
+2026-09-21 07:55:25,281 INFO django.channels.server [mHTTP GET /accounts/chat/ 200 [0.34, 127.0.0.1:64517][0m
+2026-09-21 07:55:25,292 INFO django.channels.server [mHTTP GET /accounts/chat/ 200 [0.35, 127.0.0.1:64728][0m
+2026-09-21 07:55:25,300 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:59282]
+2026-09-21 07:55:25,520 INFO django.channels.server WebSocket CONNECT /ws/chat/4/ [127.0.0.1:61072]
+2026-09-21 07:55:29,235 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-21 07:55:31,548 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:01:27,941 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\models.py changed, reloading.
+2026-09-21 08:01:29,690 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:01:48,028 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:01:50,013 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:01:52,581 ERROR django.request Internal Server Error: /accounts/me/
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 534, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\mixins.py", line 21, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column accounts_profile.display_name does not exist
+LINE 1: ...unts_profile"."id", "accounts_profile"."user_id", "accounts_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 43, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\base.py", line 255, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 526, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 581, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 508, in func
+    return context.run(run_child)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 506, in run_child
+    return child()
+           ^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 585, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 539, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\fields.py", line 432, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\fields.py", line 99, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 539, in __get__
+    instance._state.fetch_mode.fetch(self, instance)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fetch_modes.py", line 17, in fetch
+    fetcher.fetch_one(instance)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 564, in fetch_one
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 718, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 455, in __len__
+    self._fetch_all()
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column accounts_profile.display_name does not exist
+LINE 1: ...unts_profile"."id", "accounts_profile"."user_id", "accounts_...
+                                                             ^
+
+2026-09-21 08:01:53,864 ERROR django.request Internal Server Error: /accounts/me/
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 534, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\mixins.py", line 21, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column accounts_profile.display_name does not exist
+LINE 1: ...unts_profile"."id", "accounts_profile"."user_id", "accounts_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 43, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\base.py", line 255, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 526, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 581, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 508, in func
+    return context.run(run_child)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 506, in run_child
+    return child()
+           ^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\generics.py", line 212, in get
+    return self.retrieve(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 585, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 539, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\fields.py", line 432, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\fields.py", line 99, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 539, in __get__
+    instance._state.fetch_mode.fetch(self, instance)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fetch_modes.py", line 17, in fetch
+    fetcher.fetch_one(instance)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 564, in fetch_one
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 718, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 455, in __len__
+    self._fetch_all()
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column accounts_profile.display_name does not exist
+LINE 1: ...unts_profile"."id", "accounts_profile"."user_id", "accounts_...
+                                                             ^
+
+2026-09-21 08:01:58,425 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:06:23,507 WARNING django.request Unsupported Media Type: /accounts/me/profile/
+2026-09-21 08:06:56,253 ERROR django.request Internal Server Error: /accounts/bank-cards/
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "unique_bank_card_per_user"
+DETAIL:  Key (user_id, bin_code, account_number)=(86, 970416, 9988776655) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Dev\Django\VieStore\accounts\views.py", line 68, in perform_create
+    card = serializer.save(user=self.request.user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 1020, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "unique_bank_card_per_user"
+DETAIL:  Key (user_id, bin_code, account_number)=(86, 970416, 9988776655) already exists.
+
+2026-09-21 08:07:45,216 WARNING django.request Bad Request: /accounts/bank-cards/
+2026-09-21 08:09:16,000 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:09:35,668 WARNING django.request Bad Request: /o2/token/
+2026-09-21 08:09:42,298 WARNING django.request Bad Request: /o2/token/
+2026-09-21 08:10:05,059 WARNING django.request Bad Request: /o2/token/
+2026-09-21 08:10:27,840 WARNING django.request Not Found: /admin/accounts/user/60/password/
+2026-09-21 08:10:27,955 WARNING django.request Not Found: /favicon.ico
+2026-09-21 08:20:45,103 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:20:47,372 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:32:56,205 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\models.py changed, reloading.
+2026-09-21 08:32:58,710 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:34:11,725 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:34:13,607 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:34:22,084 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\views.py changed, reloading.
+2026-09-21 08:34:24,538 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:42:33,590 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\models.py changed, reloading.
+2026-09-21 08:42:35,717 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:42:56,181 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\models.py changed, reloading.
+2026-09-21 08:42:58,706 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:43:40,235 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:43:42,426 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:43:49,294 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:43:51,527 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:43:57,995 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\serializers.py changed, reloading.
+2026-09-21 08:44:00,522 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 08:48:03,069 WARNING django.request Bad Request: /accounts/departments/1/
+2026-09-21 09:06:33,281 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 09:16:45,913 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\permissions.py changed, reloading.
+2026-09-21 09:16:47,691 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 09:17:00,567 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\models.py changed, reloading.
+2026-09-21 09:17:01,940 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 09:17:06,812 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\models.py changed, reloading.
+2026-09-21 09:17:08,356 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-21 09:27:03,408 ERROR django.request Internal Server Error: /store/customers/
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "unique_customer_phone_per_company"
+DETAIL:  Key (company_id, phone)=(TESTCOeb266b40, 0901234567) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\decorators\csrf.py", line 64, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 526, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 474, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 485, in raise_uncaught_exception
+    raise exc
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\views.py", line 523, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\generics.py", line 246, in post
+    return self.create(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Dev\Django\VieStore\store\api.py", line 38, in perform_create
+    serializer.save(company_id=self.request.user.company_id)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\rest_framework\serializers.py", line 1020, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 752, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 904, in save
+    self.save_base(
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 996, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 1201, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\base.py", line 1253, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 2166, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1954, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "unique_customer_phone_per_company"
+DETAIL:  Key (company_id, phone)=(TESTCOeb266b40, 0901234567) already exists.
+
+2026-09-21 09:27:36,621 WARNING django.request Bad Request: /store/customers/
+2026-09-21 09:28:33,493 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-22 08:24:57,032 WARNING django.request Unauthorized: /accounts/me/
+2026-09-23 08:13:06,873 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 08:26:15,724 ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\deprecation.py", line 440, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\http\request.py", line 210, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+2026-09-23 08:41:59,399 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 08:42:03,860 WARNING django.request Not Found: /favicon.ico
+2026-09-23 08:44:34,975 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 08:44:36,606 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 08:46:06,930 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 08:46:07,921 WARNING django.request Unauthorized: /membership/plans/
+2026-09-23 09:57:17,167 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\models.py changed, reloading.
+2026-09-23 09:57:17,359 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\models.py changed, reloading.
+2026-09-23 09:57:18,860 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:57:18,952 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:57:38,244 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 09:57:38,318 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 09:57:39,848 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:57:39,886 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:57:47,956 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 09:57:48,227 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 09:57:49,733 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:57:50,029 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:01,929 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 09:58:02,097 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 09:58:03,775 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:03,898 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:09,050 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 09:58:09,872 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 09:58:10,711 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:11,651 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:13,210 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 09:58:14,641 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:24,782 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 09:58:25,087 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 09:58:26,345 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:26,608 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:34,109 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 09:58:34,122 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 09:58:35,778 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:35,780 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:40,996 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 09:58:41,540 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 09:58:42,804 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:43,398 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:45,756 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 09:58:45,970 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 09:58:47,469 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:47,690 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:58:58,292 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 09:58:58,477 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 09:58:59,900 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 09:59:00,023 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:19:26,216 WARNING django.request Bad Request: /membership/bookings/2/cancel/
+2026-09-23 10:27:02,850 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 10:27:02,928 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 10:27:04,574 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:27:04,575 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:32:59,229 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:32:59,601 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:33:00,837 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:01,148 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:14,168 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:33:14,523 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:33:15,781 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:16,100 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:25,780 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:33:26,150 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:33:27,469 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:27,790 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:29,737 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:33:30,147 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:33:31,391 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:33:31,797 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:34:03,462 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 10:34:03,932 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 10:34:05,162 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:34:05,525 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:34:20,800 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 10:34:21,205 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 10:34:22,399 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:34:22,826 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:34:30,676 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 10:34:31,342 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 10:34:32,242 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:34:32,946 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:35:26,253 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:35:26,350 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:35:27,937 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:35:28,025 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:35:39,111 WARNING django.request Bad Request: /membership/tables/13/request-use/
+2026-09-23 10:42:13,821 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 10:42:14,358 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 10:42:15,553 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:42:16,001 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:42:45,068 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 10:42:45,507 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 10:42:46,565 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:42:46,956 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:22,305 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:43:22,651 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:43:23,777 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:24,143 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:33,743 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:43:34,142 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:43:35,244 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:35,645 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:44,077 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:43:44,444 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:43:45,576 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:45,925 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:55,676 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:43:56,248 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:43:57,213 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:43:57,773 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:44:02,773 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:44:03,252 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 10:44:04,276 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:44:04,759 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:02,012 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\services.py changed, reloading.
+2026-09-23 10:47:02,657 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\services.py changed, reloading.
+2026-09-23 10:47:03,536 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:04,176 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:15,885 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 10:47:16,364 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 10:47:17,502 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:17,939 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:37,195 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:47:37,491 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:47:38,977 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:39,194 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:51,440 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:47:51,575 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 10:47:53,479 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:47:53,572 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:48:12,549 WARNING django.request Bad Request: /membership/auth/login/
+2026-09-23 10:49:39,797 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 10:49:40,238 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 10:49:41,621 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:49:41,857 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:58:51,294 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\models.py changed, reloading.
+2026-09-23 10:58:51,775 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\models.py changed, reloading.
+2026-09-23 10:58:52,788 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:58:53,190 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:59:10,225 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\services.py changed, reloading.
+2026-09-23 10:59:10,708 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\services.py changed, reloading.
+2026-09-23 10:59:11,610 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:59:12,106 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:59:30,859 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\services.py changed, reloading.
+2026-09-23 10:59:31,197 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\services.py changed, reloading.
+2026-09-23 10:59:32,302 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:59:32,582 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:59:50,459 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 10:59:50,624 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 10:59:51,874 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 10:59:51,982 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:11,394 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 11:00:12,548 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 11:00:12,952 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:13,996 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:32,339 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 11:00:33,185 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 11:00:33,786 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:34,676 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:47,030 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 11:00:47,646 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\serializers.py changed, reloading.
+2026-09-23 11:00:48,568 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:49,113 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:00:52,400 WARNING django.request Bad Request: /membership/tables/20/request-use/
+2026-09-23 11:01:02,444 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 11:01:02,892 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 11:01:04,004 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:01:04,415 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:01:29,163 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 11:01:29,913 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 11:01:30,807 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:01:31,428 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:01:46,990 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 11:01:47,439 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 11:01:48,572 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:01:48,944 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:05,332 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 11:02:05,384 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 11:02:06,877 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:06,918 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:20,250 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 11:02:20,611 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 11:02:21,731 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:22,085 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:33,490 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 11:02:33,920 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\admin.py changed, reloading.
+2026-09-23 11:02:35,006 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:35,432 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:55,274 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\signals.py changed, reloading.
+2026-09-23 11:02:55,304 INFO django.utils.autoreload C:\Dev\Django\VieStore\accounts\signals.py changed, reloading.
+2026-09-23 11:02:56,764 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:02:56,765 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:13,922 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 11:14:14,612 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\services.py changed, reloading.
+2026-09-23 11:14:15,517 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:16,117 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:23,313 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 11:14:23,879 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 11:14:24,817 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:25,357 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:34,268 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 11:14:34,328 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\api.py changed, reloading.
+2026-09-23 11:14:35,658 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:35,727 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:39,419 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 11:14:39,527 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 11:14:40,925 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:40,970 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:49,083 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 11:14:49,466 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\admin.py changed, reloading.
+2026-09-23 11:14:50,528 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:14:50,906 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 11:32:47,993 WARNING django.request Not Found: /api/
+2026-09-23 12:16:11,027 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:16:12,080 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:16:12,614 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:16:13,629 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:16:18,986 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:16:19,425 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:16:20,405 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:16:20,785 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:47:05,164 ERROR django.security.DisallowedHost Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\deprecation.py", line 440, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\http\request.py", line 210, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+2026-09-23 12:52:45,348 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:52:45,674 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:52:46,966 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:52:47,172 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:52:56,208 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:52:56,648 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 12:52:57,631 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 12:52:58,039 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:54:35,774 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\models.py changed, reloading.
+2026-09-23 14:54:35,987 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\models.py changed, reloading.
+2026-09-23 14:54:37,516 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:54:37,589 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:54:43,251 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\serializers.py changed, reloading.
+2026-09-23 14:54:43,270 INFO django.utils.autoreload C:\Dev\Django\VieStore\store\serializers.py changed, reloading.
+2026-09-23 14:54:44,896 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:54:44,896 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:54:57,138 ERROR django.request Internal Server Error: /admin/store/tablesession/
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column store_table.camera_url does not exist
+LINE 1: ...store_table"."status", "store_table"."is_active", "store_tab...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\exception.py", line 43, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 577, in thread_handler
+    raise exc_info[1]
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\core\handlers\base.py", line 255, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 526, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 581, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 508, in func
+    return context.run(run_child)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\asgiref\sync.py", line 506, in run_child
+    return child()
+           ^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\contrib\admin\options.py", line 776, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\decorators.py", line 191, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\decorators.py", line 189, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\views\decorators\cache.py", line 79, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\contrib\admin\sites.py", line 248, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\decorators.py", line 47, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\decorators.py", line 191, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\utils\decorators.py", line 189, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\contrib\admin\options.py", line 2465, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 455, in __len__
+    self._fetch_all()
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Dev\Django\VieStore\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column store_table.camera_url does not exist
+LINE 1: ...store_table"."status", "store_table"."is_active", "store_tab...
+                                                             ^
+
+2026-09-23 14:55:27,167 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 14:55:27,903 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-23 14:55:29,091 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:55:29,592 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:55:50,170 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 14:55:50,367 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\api.py changed, reloading.
+2026-09-23 14:55:51,925 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:55:52,127 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:56:00,971 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 14:56:01,541 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 14:56:02,769 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:56:03,410 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:56:07,358 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 14:56:08,969 INFO django.utils.autoreload C:\Dev\Django\VieStore\membership\urls.py changed, reloading.
+2026-09-23 14:56:09,663 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:56:10,992 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-23 14:56:45,460 WARNING django.request Not Found: /membership/sessions/1/payment-qr/
+2026-09-23 14:57:25,033 WARNING django.request Bad Request: /membership/sessions/11/payment-qr/
+2026-09-23 14:57:55,194 WARNING django.request Bad Request: /membership/sessions/12/payment-qr/

@@ -1,0 +1,48 @@
+from django.urls import path
+
+from .api import (
+    BookingConfirmView,
+    CategoryDetailView,
+    CategoryListCreateView,
+    CustomerDetailView,
+    CustomerListCreateView,
+    CustomerOrdersView,
+    FloorDetailView,
+    FloorListCreateView,
+    MenuView,
+    OrderDetailView,
+    OrderListCreateView,
+    OrderStatusView,
+    ProductDetailView,
+    ProductListCreateView,
+    StaffBookingCancelView,
+    StaffBookingListView,
+    TableCloseView,
+    TableDetailView,
+    TableListCreateView,
+    TableOpenView,
+)
+
+app_name = 'store'
+urlpatterns = [
+    path('categories/', CategoryListCreateView.as_view(), name='categories'),
+    path('categories/<int:pk>/', CategoryDetailView.as_view(), name='category-detail'),
+    path('products/', ProductListCreateView.as_view(), name='products'),
+    path('products/<int:pk>/', ProductDetailView.as_view(), name='product-detail'),
+    path('menu/', MenuView.as_view(), name='menu'),
+    path('floors/', FloorListCreateView.as_view(), name='floors'),
+    path('floors/<int:pk>/', FloorDetailView.as_view(), name='floor-detail'),
+    path('tables/', TableListCreateView.as_view(), name='tables'),
+    path('tables/<int:pk>/', TableDetailView.as_view(), name='table-detail'),
+    path('tables/<int:table_id>/open/', TableOpenView.as_view(), name='table-open'),
+    path('tables/<int:table_id>/close/', TableCloseView.as_view(), name='table-close'),
+    path('customers/', CustomerListCreateView.as_view(), name='customers'),
+    path('customers/<int:pk>/', CustomerDetailView.as_view(), name='customer-detail'),
+    path('customers/<int:customer_id>/orders/', CustomerOrdersView.as_view(), name='customer-orders'),
+    path('orders/', OrderListCreateView.as_view(), name='orders'),
+    path('orders/<int:pk>/', OrderDetailView.as_view(), name='order-detail'),
+    path('orders/<int:order_id>/status/', OrderStatusView.as_view(), name='order-status'),
+    path('bookings/', StaffBookingListView.as_view(), name='bookings'),
+    path('bookings/<int:pk>/confirm/', BookingConfirmView.as_view(), name='booking-confirm'),
+    path('bookings/<int:pk>/cancel/', StaffBookingCancelView.as_view(), name='booking-cancel'),
+]

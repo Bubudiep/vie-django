@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Company room</title>
+</head>
+<body>
+    <p>Access token: <input id="token-input" type="text" size="50"></p>
+    <p>Company id: <input id="company-input" type="text" size="20"></p>
+    <button id="connect-btn">Connect</button>
+    <p id="status">disconnected</p>
+
+    <textarea id="chat-log" cols="60" rows="15" readonly></textarea><br>
+    <input id="chat-message-input" type="text" size="60">
+    <input id="chat-message-submit" type="button" value="Send">
+
+    <script>
+        let chatSocket = null;
+
+        document.querySelector('#connect-btn').onclick = function () {
+            const token = document.querySelector('#token-input').value;
+            const companyId = document.querySelector('#company-input').value;
+            if (!token || !companyId) return;
+
+            chatSocket = new WebSocket(
+                (window.location.protocol === 'https:' ? 'wss://' : 'ws://')
+                + window.location.host
+                + '/ws/room/' + encodeURIComponent(companyId) + '/?token=' + encodeURIComponent(token)
+            );
+
+            chatSocket.onopen = function () {
+                document.querySelector('#status').textContent = 'connected';
+            };
+
+            chatSocket.onmessage = function (e) {
+                const data = JSON.parse(e.data);
+                document.querySelector('#chat-log').value += (JSON.stringify(data) + '\n');
+            };
+
+            chatSocket.onclose = function (e) {
+                document.querySelector('#status').textContent = 'disconnected (code ' + e.code + ')';
+            };
+        };
+
+        document.querySelector('#chat-message-input').onkeyup = function (e) {
+            if (e.key === 'Enter') {
+                document.querySelector('#chat-message-submit').click();
+            }
+        };
+
+        document.querySelector('#chat-message-submit').onclick = function () {
+            if (!chatSocket) return;
+            const messageInputDom = document.querySelector('#chat-message-input');
+            const message = messageInputDom.value;
+            if (!message) return;
+            chatSocket.send(JSON.stringify({ message: message }));
+            messageInputDom.value = '';
+        };
+    </script>
+</body>
+</html>

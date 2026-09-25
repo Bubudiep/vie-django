@@ -1,0 +1,13 @@
+2026-09-19 14:38:13,169 INFO store.api Table opened: table_id=1 session_id=1 by user_id=73
+2026-09-19 14:38:13,189 INFO store.api Order created: order_id=1 session_id=1 by user_id=73
+2026-09-19 14:38:13,202 INFO store.api Table closed: table_id=1 session_id=1 by user_id=73
+2026-09-19 14:38:29,925 INFO store.api Table opened: table_id=2 session_id=2 by user_id=74
+2026-09-19 14:38:29,943 INFO store.api Order created: order_id=2 session_id=2 by user_id=74
+2026-09-19 14:38:29,958 INFO store.api Table closed: table_id=2 session_id=2 by user_id=74
+2026-09-19 14:38:29,968 INFO store.api Table opened: table_id=2 session_id=3 by user_id=74
+2026-09-19 16:31:15,561 INFO store.api Table opened: table_id=3 session_id=4 by user_id=82
+2026-09-19 16:31:15,578 INFO store.api Order created: order_id=3 session_id=4 by user_id=82
+2026-09-19 16:31:15,606 INFO store.api Table closed: table_id=3 session_id=4 by user_id=81
+2026-09-21 09:27:36,638 INFO store.api Order created: order_id=4 session_id=None customer_id=3 by user_id=91
+2026-09-21 09:27:36,652 INFO store.api Order created: order_id=5 session_id=None customer_id=3 by user_id=91
+2026-09-21 09:27:36,665 INFO store.api Order created: order_id=6 session_id=None customer_id=4 by user_id=91

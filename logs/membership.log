@@ -1,0 +1,51 @@
+2026-09-23 08:26:30,035 INFO membership.api Booking created: booking_id=1 customer_id=5 table_id=4
+2026-09-23 08:44:41,247 INFO membership.api Customer login: customer_id=6 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 08:46:20,434 INFO membership.api Customer login: customer_id=7 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 09:35:08,445 INFO membership.api Customer login: customer_id=6 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 09:49:45,455 INFO membership.api Customer login: customer_id=8 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 09:51:58,251 INFO membership.api Customer login: customer_id=9 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 09:52:11,822 INFO membership.api Customer login: customer_id=9 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 09:59:21,071 INFO membership.api Customer login: customer_id=10 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 10:18:34,275 INFO membership.api Booking created: booking_id=2 customer_id=6 table_id=13
+2026-09-23 10:19:25,480 INFO membership.api Booking cancelled by customer: booking_id=2 customer_id=6
+2026-09-23 10:25:58,588 INFO membership.api Booking created: booking_id=3 customer_id=6 table_id=16
+2026-09-23 10:28:37,051 INFO membership.api Booking cancelled by customer: booking_id=3 customer_id=6
+2026-09-23 10:28:41,802 INFO membership.api Booking created: booking_id=4 customer_id=6 table_id=13
+2026-09-23 10:31:16,517 INFO membership.api Booking created: booking_id=5 customer_id=6 table_id=16
+2026-09-23 10:31:25,362 INFO membership.api Booking cancelled by customer: booking_id=4 customer_id=6
+2026-09-23 10:32:14,973 INFO membership.api Booking cancelled by customer: booking_id=5 customer_id=6
+2026-09-23 10:35:05,922 INFO membership.api Customer login: customer_id=11 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 10:35:07,795 INFO membership.api Table use requested via QR: booking_id=6 customer_id=11 table_id=13
+2026-09-23 10:35:08,227 INFO membership.api Table use requested via QR: booking_id=7 customer_id=11 table_id=13
+2026-09-23 10:35:38,140 INFO membership.api Customer login: customer_id=11 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 10:48:12,097 INFO membership.api Customer login: customer_id=12 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 10:48:13,038 INFO membership.api Customer login: customer_id=6 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 10:59:59,090 INFO membership.api Table use requested via QR: booking_id=8 customer_id=6 table_id=20
+2026-09-23 11:04:42,243 INFO membership.api Customer login: customer_id=14 company_id=XAXTNRFS0M0EIUHRX4
+2026-09-23 11:04:58,776 INFO membership.api Booking cancelled by customer: booking_id=8 customer_id=6
+2026-09-23 11:38:53,352 INFO membership.api Table use requested via QR: booking_id=11 customer_id=6 table_id=13
+2026-09-23 11:40:03,171 INFO membership.api Table switched: session_id=10 customer_id=6 old_table_id=13 new_table_id=20
+2026-09-23 11:53:22,708 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 11:53:38,389 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 11:53:58,709 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 11:54:13,043 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 11:54:14,494 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 11:54:45,873 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:14:27,808 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:53:25,980 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:53:34,139 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:53:48,589 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:55:41,258 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:55:42,934 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:55:44,209 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:55:53,065 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:57:56,880 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:57:58,762 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:58:00,017 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:58:01,991 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 12:58:06,474 INFO membership.api Table switched: session_id=10 customer_id=6 old_table_id=20 new_table_id=18
+2026-09-23 13:04:47,697 INFO membership.api Table switched: session_id=10 customer_id=6 old_table_id=18 new_table_id=13
+2026-09-23 13:04:53,183 INFO membership.api Table switched: session_id=10 customer_id=6 old_table_id=13 new_table_id=19
+2026-09-23 14:47:05,592 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 14:52:08,475 INFO membership.api Payment requested: session_id=10 customer_id=6
+2026-09-23 14:56:44,896 INFO membership.api Customer login: customer_id=19 company_id=XAXTNRFS0M0EIUHRX4
