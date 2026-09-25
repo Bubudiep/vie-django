@@ -1023,3 +1023,5 @@ LINE 1: ...store_table"."status", "store_table"."is_active", "store_tab...
 2026-09-23 14:56:45,460 WARNING django.request Not Found: /membership/sessions/1/payment-qr/
 2026-09-23 14:57:25,033 WARNING django.request Bad Request: /membership/sessions/11/payment-qr/
 2026-09-23 14:57:55,194 WARNING django.request Bad Request: /membership/sessions/12/payment-qr/
+2026-09-25 08:31:21,417 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 08:31:24,037 INFO django.utils.autoreload Watching for file changes with StatReloader
