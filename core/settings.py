@@ -23,7 +23,10 @@ VIETQR_ACCOUNT_NO = os.getenv('VIETQR_ACCOUNT_NO', '')
 VIETQR_ACCOUNT_NAME = os.getenv('VIETQR_ACCOUNT_NAME', '')
 DEBUG = True
 ALLOWED_HOSTS = ['itx.vba.io.vn','localhost','localhost:6001']
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://itx.vba.io.vn',
+    'http://itx.vba.io.vn',
+]
 INSTALLED_APPS = [
     'daphne',
     'django.contrib.admin',
