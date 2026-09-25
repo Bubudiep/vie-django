@@ -22,7 +22,7 @@ VIETQR_BANK_ID = os.getenv('VIETQR_BANK_ID', '')
 VIETQR_ACCOUNT_NO = os.getenv('VIETQR_ACCOUNT_NO', '')
 VIETQR_ACCOUNT_NAME = os.getenv('VIETQR_ACCOUNT_NAME', '')
 DEBUG = True
-ALLOWED_HOSTS = ['localhost','localhost:6001']
+ALLOWED_HOSTS = ['itx.vba.io.vn','localhost','localhost:6001']
 
 INSTALLED_APPS = [
     'daphne',

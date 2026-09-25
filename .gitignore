@@ -4,7 +4,7 @@ venv/
 *.py[cod]
 *.pyc
 *$py.class
-
+.log
 # Database nội bộ nếu có xài tạm
 *.sqlite3
 
