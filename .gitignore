@@ -1,2 +1,13 @@
 venv/
 .env
+**/__pycache__
+*.py[cod]
+*.pyc
+*$py.class
+
+# Database nội bộ nếu có xài tạm
+*.sqlite3
+
+# Thư mục chứa media/static gom về (tùy dự án)
+media/
+staticfiles/
