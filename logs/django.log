@@ -1031,3 +1031,5 @@ LINE 1: ...store_table"."status", "store_table"."is_active", "store_tab...
 2026-09-25 08:57:11,755 INFO django.utils.autoreload Watching for file changes with StatReloader
 2026-09-25 09:02:08,362 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
 2026-09-25 09:02:10,095 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:11:25,237 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 09:11:27,041 INFO django.utils.autoreload Watching for file changes with StatReloader
