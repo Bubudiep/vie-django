@@ -66,6 +66,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3001',
     'http://localhost:3002',
     'http://localhost:3003',
+    'https://itx.vba.io.vn',
+    'http://itx.vba.io.vn',
 ]
 CORS_ALLOW_HEADERS = (*default_headers, 'x-company-id')
 
