@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CORS_ALLOW_ALL_ORIGINS = False  # (dev local thôi)
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:6001',
     'http://localhost:3000',
@@ -68,6 +69,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3003',
     'https://itx.vba.io.vn',
     'http://itx.vba.io.vn',
+    'https://h5.zdn.vn',
+    'zbrowser://h5.zdn.vn',
 ]
 CORS_ALLOW_HEADERS = (*default_headers, 'x-company-id')
 
@@ -115,9 +118,9 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Ho_Chi_Minh'
 USE_I18N = True
 USE_TZ = True
-STATIC_URL = 'static/'
+STATIC_URL = 'staticfiles/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / 'staticfiles',
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = 'media/'

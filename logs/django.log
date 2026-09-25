@@ -1047,3 +1047,14 @@ LINE 1: ...store_table"."status", "store_table"."is_active", "store_tab...
 2026-09-25 09:19:32,019 INFO django.utils.autoreload Watching for file changes with StatReloader
 2026-09-25 09:19:42,419 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
 2026-09-25 09:19:44,280 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:29:40,292 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 09:29:41,948 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:29:55,502 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 09:29:57,111 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:30:28,404 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 09:30:30,027 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:30:33,592 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 09:30:35,124 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:30:38,474 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
+2026-09-25 09:30:40,004 INFO django.utils.autoreload Watching for file changes with StatReloader
+2026-09-25 09:30:45,668 INFO django.utils.autoreload C:\Dev\Django\VieStore\core\settings.py changed, reloading.
